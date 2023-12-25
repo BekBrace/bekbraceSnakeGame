@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="game" width="400" height="400"></canvas>
+    <button class="start-button">Start</button>
+    <div class="game-over">
+        <h2>Game Over</h2>
+        <p>Final Score:<span class="score-display">0</span></p>
+        <button class="start-button">Again</button>
+        <audio src="coll.mp3" id="collisionSound"></audio>
+        <audio src="eat.mp3" id="eatingSound"></audio>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html>

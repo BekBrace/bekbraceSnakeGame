@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Press+Start+2P&display=swap');
+
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: #a7d4a1;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Press Start 2P", cursive;
+}
+
+canvas{
+    border: 2px solid #748c72;
+    background: linear-gradient(#8fb58a, #a7d4a1, #abcfa5, #8fb58a);
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+
+.start-button{
+    font-family: "Press Start 2P", cursive;
+    margin-top: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #061138;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.game-over{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    font-size: 12px;
+}
+
+.score-display{
+    color: #000;
+    margin-bottom: 105px;
+    text-align: center;
+}
+
+
+

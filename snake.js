@@ -158,9 +158,9 @@ function loop(){
     // The allowance period for the snake to turn yellow for a few seconds then returns back to black (dark green)
     if (gemEaten){
         allowanceCounter++;
-        if (allowanceCounter >=100){
-            gemEaten = false;
-            allowanceCounter = 0;
+        if (allowanceCounter >=50){
+                gemEaten = false;
+                allowanceCounter = 0;
         }
     }
  
@@ -172,7 +172,7 @@ function loop(){
     }
     count = 95; // speed
 
-    context.clearRect(0,0, canvas.clientWidth, canvas.height);
+    context.clearRect(0,0, canvas.width, canvas.height);
     
     snake.x += snake.dx;
     

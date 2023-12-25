@@ -161,14 +161,14 @@ function loop(){
             allowanceCounter = 0;
         }
     }
-    
+ 
     animationFrame = requestAnimationFrame(loop);
-
+    
     // Control game loop speed
     if (++count < 100){
         return;
     }
-    count = 100; // speed
+    count = 95; // speed
 
     context.clearRect(0,0, canvas.clientWidth, canvas.height);
     

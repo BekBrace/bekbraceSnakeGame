@@ -168,7 +168,7 @@ function loop(){
     if (++count < 100){
         return;
     }
-    count = 95; // speed
+    count = 100; // speed
 
     context.clearRect(0,0, canvas.clientWidth, canvas.height);
     

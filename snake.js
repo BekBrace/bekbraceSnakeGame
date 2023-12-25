@@ -172,6 +172,7 @@ function loop(){
     }
     count = 95; // speed
 
+    //NOTE: There was a typo in the tutorial, canvas.clientWidth, it should be canvas.width
     context.clearRect(0,0, canvas.width, canvas.height);
     
     snake.x += snake.dx;

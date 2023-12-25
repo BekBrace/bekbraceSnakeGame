@@ -1,21 +1,14 @@
 # Snake Game
-# Version 1.2 [changes on the original game]
-# Changes [December 18th, 2023]:
-1. Changing the layout of the screen.
-2. You can pause the game by hittin spacebar.
-3. Snake color changes when eating a gem.
-4. Sounds of eating and collision are added.
-5. Changing the Font to Press 2P Start [Pixel Style].
 
 This is a recreation of the retro-style Nokia 3310 Snake game implemented in JavaScript, using HTML5 Canvas for rendering. 
 
 This is the online demo deployed on Netlify: https://retrosnakenokia.netlify.app
 
-Version 1.1
+Original Game coded in November - Version 1.1
 
 ![stream everyday 715 to 900 warsaw time zone](https://github.com/BekBrace/nokia3310-snake/assets/60483846/33c73fdd-5149-4165-92de-353d0c4edc4e)
 
-Version 1.2
+Latest Game changes applied on December 25th, 2023 - Version 1.2
 
 ![snake v1 2](https://github.com/BekBrace/nokia3310-snake/assets/60483846/07371046-5d3a-4ff0-bfcf-1f8a7e3abf57)
 

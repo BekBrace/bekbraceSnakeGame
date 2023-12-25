@@ -118,6 +118,8 @@ document.addEventListener('touchmove', function(e){
         return;
     }
     
+    e.preventDefault();
+    
     // Swipe detection and snake movement
     let touchEndX = e.touches[0].clientX;
     let touchEndY = e.touches[0].clientY;

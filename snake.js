@@ -96,7 +96,8 @@ document.addEventListener('keydown', function(e){
     } 
 });
 
-// Event listeners for the smartphone version
+// //////////////////////////////MEMBERS//////////////////////////////////
+// Event listeners for the smartphone version [Exclusive: YT Vid for Memebers]
 let touchStartX = 0;
 let touchStartY = 0;
 
@@ -142,6 +143,7 @@ document.addEventListener('touchmove', function(e){
         }
     }
 });
+// //////////////////////////////END-MEMBERS//////////////////////////////////
 
 // Main loop function
 function loop(){
@@ -151,7 +153,7 @@ function loop(){
     // The allowance period for the snake to turn yellow for a few seconds then returns back to black (dark green)
     if (gemEaten){
         allowanceCounter++;
-        if (allowanceCounter >=50){
+        if (allowanceCounter >=100){
             gemEaten = false;
             allowanceCounter = 0;
         }

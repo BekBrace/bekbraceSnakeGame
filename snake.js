@@ -94,7 +94,54 @@ document.addEventListener('keydown', function(e){
             animationFrame = requestAnimationFrame(loop);
         }
     } 
-})
+});
+
+// Event listeners for the smartphone version
+let touchStartX = 0;
+let touchStartY = 0;
+
+document.addEventListener('touchstart', function(e){
+    if (!gameRunning){
+        return;
+    }
+    // Initial points for the snake to move on the screen
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', function(e){
+    if (!gameRunning){
+        return;
+    }
+    
+    // Swipe detection and snake movement
+    let touchEndX = e.touches[0].clientX;
+    let touchEndY = e.touches[0].clientY;
+    let dx = touchEndX - touchStartX;
+    let dy = touchEndY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)){
+        // Right swipe
+        if (dx > 0 && snake.dx ===0){
+            snake.dx = grid;
+            snake.dy = 0;
+        // Left swipe
+        } else if (dx < 0 && snake.dx === 0){
+            snake.dx = -grid;
+            snake.dy = 0;
+        }
+    }else{
+        // Down Swipe
+        if (dy > 0 && snake.dy === 0){
+            snake.dy = grid;
+            snake.dx = 0;
+        // Up Swipe
+        }else if (dy<0 && snake.dy === 0){
+            snake.dy = -grid;
+            snake.dx = 0;
+        }
+    }
+});
 
 // Main loop function
 function loop(){

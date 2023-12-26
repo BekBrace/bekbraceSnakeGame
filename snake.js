@@ -172,7 +172,7 @@ function loop(){
     if (++count < 100){
         return;
     }
-    count = 90; // speed
+    count = 98; // speed
 
     //NOTE: There was a typo in the tutorial, canvas.clientWidth, it should be canvas.width
     context.clearRect(0,0, canvas.width, canvas.height);

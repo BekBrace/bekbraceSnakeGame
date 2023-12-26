@@ -6,8 +6,10 @@
 
 //This line gets a reference to the HTML5 Canvas element in your HTML document.
 const canvas = document.getElementById('game');
+
 // This line retrieves the 2D rendering context of the Canvas. 
 const context = canvas.getContext('2d');
+
 // Sound variables
 const collisionSound = document.getElementById('collisionSound');
 const eatingSound = document.getElementById('eatingSound');
@@ -167,7 +169,7 @@ function loop(){
     animationFrame = requestAnimationFrame(loop);
     
     // Control game loop speed
-    if (++count < 105){
+    if (++count < 200){
         return;
     }
     count = 95; // speed

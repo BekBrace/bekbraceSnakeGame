@@ -167,7 +167,7 @@ function loop(){
     animationFrame = requestAnimationFrame(loop);
     
     // Control game loop speed
-    if (++count < 100){
+    if (++count < 105){
         return;
     }
     count = 95; // speed

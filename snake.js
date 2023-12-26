@@ -169,10 +169,10 @@ function loop(){
     animationFrame = requestAnimationFrame(loop);
     
     // Control game loop speed
-    if (++count < 200){
+    if (++count < 100){
         return;
     }
-    count = 95; // speed
+    count = 90; // speed
 
     //NOTE: There was a typo in the tutorial, canvas.clientWidth, it should be canvas.width
     context.clearRect(0,0, canvas.width, canvas.height);

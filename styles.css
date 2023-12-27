@@ -15,6 +15,10 @@ body{
     font-family: "Press Start 2P", cursive;
 }
 
+.title{
+    align-text: center;
+}
+
 canvas{
     border: 2px solid #748c72;
     background: linear-gradient(#8fb58a, #a7d4a1, #abcfa5, #8fb58a); 

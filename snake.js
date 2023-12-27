@@ -270,10 +270,10 @@ function endGame(){
     gameOverScreen.style.display = 'block';
     document.querySelector('.game-over .score-display').textContent = score;
     
-    // play the hitting sound
+    // play the hitting sound (moved from the loop function to the endGame function)
     collisionSound.play();
     
-    // Clear the canvas
+    // Clear the canvas and the snake when game is over
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.clearRect(0,0,canva.width, canvas.height);    
     if (animationFrame){

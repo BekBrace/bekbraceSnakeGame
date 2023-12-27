@@ -8,11 +8,16 @@ Original Game coded in November - Version 1.1
 
 ![stream everyday 715 to 900 warsaw time zone](https://github.com/BekBrace/nokia3310-snake/assets/60483846/33c73fdd-5149-4165-92de-353d0c4edc4e)
 
-Latest Game changes applied on December 25th, 2023 - Version 1.2
+More changes applied on December 25th, 2023 - Version 1.2
 
 ![snake v1 2](https://github.com/BekBrace/nokia3310-snake/assets/60483846/07371046-5d3a-4ff0-bfcf-1f8a7e3abf57)
 
 The game includes basic functionalities such as snake movement, collision detection, and apple consumption.
+
+Latest commits [adding gridline, score below the grid, and add sound for paused game]
+
+![3](https://github.com/BekBrace/bekbraceSnakeGame/assets/60483846/b82d9f13-81a6-4f34-b66c-fbe7b783a965)
+
 
 ## Getting Started
 To run the Snake game, follow these steps:

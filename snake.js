@@ -193,11 +193,25 @@ function loop(){
         snake.y = 0;
     }
 
-
+    // Add the current head position to the snake cells array and remove the tail if exceeding the maximum cell count.
     snake.cells.unshift({x: snake.x, y: snake.y});
-
     if (snake.cells.length > snake.maxCells){
         snake.cells.pop();
+    }
+
+    // Draw grid lines - ADDED AFTER YT TUTIRIAL
+    context.strokeStyle = '#333';
+    for (let i = 0; i < canvas.width; i += grid) {
+        context.beginPath();
+        context.moveTo(i, 0);
+        context.lineTo(i, canvas.height);
+        context.stroke();
+    }
+    for (let j = 0; j < canvas.height; j += grid) {
+        context.beginPath();
+        context.moveTo(0, j);
+        context.lineTo(canvas.width, j);
+        context.stroke();
     }
 
     // Draw the gems and the snake

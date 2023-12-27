@@ -283,6 +283,8 @@ function endGame(){
     gamePaused = true;
     gameOverScreen.style.display = 'block';
     document.querySelector('.game-over .score-display').textContent = score;
+    //Clear the canvas when game is over
+    context.clearRect(0, 0, canvas.width, canvas.height);
     if (animationFrame){
         cancelAnimationFrame(animationFrame);
     }

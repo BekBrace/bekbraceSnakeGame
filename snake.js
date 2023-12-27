@@ -8,6 +8,7 @@ const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const collisionSound = document.getElementById('collisionSound');
 const eatingSound = document.getElementById('eatingSound');
+const pauseSound = document.getElementById('pauseSound');
 
 let gameRunning = false;
 
@@ -88,9 +89,11 @@ document.addEventListener('keydown', function(e){
         context.fillStyle = '#fff';
         context.font = 'bold 30px Arial';
         if (gamePaused){
-            context.fillText('Game Paused', canvas.width / 2 - 100, canvas.height / 2);
+            pauseSound.play();
+            context.fillText('Game Paused', canvas.width / 2 - 100, canvas.height / 2);           
         }else{
             // Resume the game
+            pauseSound.play();
             animationFrame = requestAnimationFrame(loop);
         }
     } 
@@ -270,10 +273,10 @@ function endGame(){
     gameOverScreen.style.display = 'block';
     document.querySelector('.game-over .score-display').textContent = score;
     
-    // play the hitting sound (moved from the loop function to the endGame function)
+    // play the hitting sound
     collisionSound.play();
     
-    // Clear the canvas and the snake when game is over
+    // Clear the canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
     snake.clearRect(0,0,canva.width, canvas.height);    
     if (animationFrame){

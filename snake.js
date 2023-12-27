@@ -4,13 +4,8 @@
 // Chapter 4: Start and End Game Functions
 // Chapter 5: Main Loop Function
 
-//This line gets a reference to the HTML5 Canvas element in your HTML document.
 const canvas = document.getElementById('game');
-
-// This line retrieves the 2D rendering context of the Canvas. 
 const context = canvas.getContext('2d');
-
-// Sound variables
 const collisionSound = document.getElementById('collisionSound');
 const eatingSound = document.getElementById('eatingSound');
 
@@ -101,8 +96,7 @@ document.addEventListener('keydown', function(e){
     } 
 });
 
-// //////////////////////////////MEMBERS//////////////////////////////////
-// Event listeners for the smartphone version [Exclusive: YT Vid for Memebers]
+// Event listeners for the smartphone version
 let touchStartX = 0;
 let touchStartY = 0;
 
@@ -119,9 +113,7 @@ document.addEventListener('touchmove', function(e){
     if (!gameRunning){
         return;
     }
-    
-    e.preventDefault();
-    
+
     // Swipe detection and snake movement
     let touchEndX = e.touches[0].clientX;
     let touchEndY = e.touches[0].clientY;
@@ -144,13 +136,12 @@ document.addEventListener('touchmove', function(e){
             snake.dy = grid;
             snake.dx = 0;
         // Up Swipe
-        }else if (dy<0 && snake.dy === 0){
+        }else if (dy < 0 && snake.dy === 0){
             snake.dy = -grid;
             snake.dx = 0;
         }
     }
 });
-// //////////////////////////////END-MEMBERS//////////////////////////////////
 
 // Main loop function
 function loop(){
@@ -161,21 +152,20 @@ function loop(){
     if (gemEaten){
         allowanceCounter++;
         if (allowanceCounter >=50){
-                gemEaten = false;
-                allowanceCounter = 0;
+            gemEaten = false;
+            allowanceCounter = 0;
         }
     }
- 
-    animationFrame = requestAnimationFrame(loop);
     
+    animationFrame = requestAnimationFrame(loop);
+
     // Control game loop speed
     if (++count < 100){
         return;
     }
-    count = 96; // speed
+    count = 95; // speed
 
-    //NOTE: There was a typo in the tutorial, canvas.clientWidth, it should be canvas.width
-    context.clearRect(0,0, canvas.width, canvas.height);
+    context.clearRect(0,0, canvas.clientWidth, canvas.height);
     
     snake.x += snake.dx;
     
@@ -199,7 +189,7 @@ function loop(){
         snake.cells.pop();
     }
 
-    // Draw grid lines - ADDED AFTER YT TUTIRIAL
+    // Draw grid lines
     context.strokeStyle = '#333';
     for (let i = 0; i < canvas.width; i += grid) {
         context.beginPath();
@@ -219,11 +209,9 @@ function loop(){
     context.fillRect(gem.x, gem.y, grid - 1, grid - 1);
     context.shadowColor = 'rgba(0,0,0,0.5)';
     context.shadowBlur = 5;
-    context.shadowOffetX = 2;
-    context.shadowOffetY = 2;
-
+    context.shadowOffsetX = 2;
+    context.shadowOffsetY = 2;
     context.fillStyle = gemEaten ? '#ffff00' : '#061138';
-
 
     // Drawing the snake and eating the gem
     snake.cells.forEach(function(cell, index){
@@ -245,9 +233,7 @@ function loop(){
         for (let i = index + 1; i < snake.cells.length; i++){
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y){
                 // invoking the endGame method
-                endGame();
-                // play the hitting sound
-                collisionSound.play();
+                endGame();           
             }
         }
     });
@@ -283,8 +269,13 @@ function endGame(){
     gamePaused = true;
     gameOverScreen.style.display = 'block';
     document.querySelector('.game-over .score-display').textContent = score;
-    //Clear the canvas when game is over
+    
+    // play the hitting sound
+    collisionSound.play();
+    
+    // Clear the canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
+    snake.clearRect(0,0,canva.width, canvas.height);    
     if (animationFrame){
         cancelAnimationFrame(animationFrame);
     }

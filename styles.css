@@ -16,7 +16,7 @@ body{
 }
 
 .title{
-    align-text: center;
+    text-align: center;
 }
 
 canvas{

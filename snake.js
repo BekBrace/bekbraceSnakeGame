@@ -212,7 +212,7 @@ function loop(){
     context.fillRect(gem.x, gem.y, grid - 1, grid - 1);
     context.shadowColor = 'rgba(0,0,0,0.5)';
     context.shadowBlur = 5;
-    context.shadowOffsetX = 2; 
+    context.shadowOffsetX = 2; //in tutorial , there was a missing S in both X and Y.
     context.shadowOffsetY = 2;
     context.fillStyle = gemEaten ? '#ffff00' : '#061138';
 

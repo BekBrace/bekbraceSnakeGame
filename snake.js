@@ -278,7 +278,7 @@ function endGame(){
     
     // Clear the canvas
     context.clearRect(0, 0, canvas.width, canvas.height);
-    snake.clearRect(0,0,canva.width, canvas.height);    
+    snake.clearRect(0,0,canvas.width, canvas.height);    
     if (animationFrame){
         cancelAnimationFrame(animationFrame);
     }

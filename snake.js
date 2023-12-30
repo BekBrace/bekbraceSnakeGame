@@ -159,7 +159,7 @@ function loop(){
             allowanceCounter = 0;
         }
     }
-    
+    // set animationFrame to loop function recursively operated via requestAnimationFrame method
     animationFrame = requestAnimationFrame(loop);
 
     // Control game loop speed
@@ -212,7 +212,7 @@ function loop(){
     context.fillRect(gem.x, gem.y, grid - 1, grid - 1);
     context.shadowColor = 'rgba(0,0,0,0.5)';
     context.shadowBlur = 5;
-    context.shadowOffsetX = 2;
+    context.shadowOffsetX = 2; 
     context.shadowOffsetY = 2;
     context.fillStyle = gemEaten ? '#ffff00' : '#061138';
 
